@@ -1,10 +1,12 @@
 const SaleTicket = ({ data }) => {
   return (
 	<div className='sale-ticket'>
-		<h5>Sale</h5>
-		<p>{data.customer.email}</p>
-		<p>{data.customer.age}</p>
-		<p>{data.couponUsed.toString()}</p>
+		<h3>Ticket Info</h3>
+		<div className="order-info">
+			<p>{data.customer.email}</p>
+			<p>{data.customer.age}</p>
+			<p>{data.couponUsed.toString()}</p>
+		</div>
 	</div>
   )
 }
