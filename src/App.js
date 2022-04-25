@@ -1,35 +1,29 @@
 import Header from './components/Header';
-import SaleTicket from './components/SaleTicket';
+import List from './components/List'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 const App = () => {
-
-  const [dataCollection, setDataCollection] = useState([])
-
-  const getData = async () => {
-    const res = await axios.get('http://localhost:5000/api/sales')
-    const data = await res.data
-    setDataCollection(data)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
 
   return (
     <div className="App">
       <Header />
-      <div className='container'>
-        {dataCollection.map((data, index) =>
-          <SaleTicket
-          key={index} 
-          data={data} 
-          />
-        )}     
-        </div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<List />} />
+        { /* 
+        <Route path='/online' element={<OnlineList />} />
+        <Route path='/store' element={<InStoreList />} />
+        */}
+      </Routes>
+    </BrowserRouter>    
     </div>
-  );
+  )
 }
 
 export default App;
