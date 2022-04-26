@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header';
+import Landing from './components/Landing';
 import List from './components/List'
 import OnlineList from './components/OnlineList';
 import InStoreList from './components/InStoreList'
@@ -16,10 +17,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
 } from 'reactstrap';
 
 const App = () => {
@@ -31,29 +28,15 @@ const App = () => {
         <NavbarToggler />
         <Collapse navbar>
           <Nav className="ml-auto" navbar>
+          <NavItem>
+              <NavLink href="/allorders">All Orders</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="/online">Online Orders</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/store">In Store Purchases</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-                </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                  </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                  </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                  </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
           </Nav>
         </Collapse>
       </Navbar>
@@ -62,7 +45,8 @@ const App = () => {
       
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<List />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/allorders' element={<List />} />
         <Route path='/online' element={<OnlineList />} />
         <Route path='/store' element={<InStoreList />} />
       </Routes>
