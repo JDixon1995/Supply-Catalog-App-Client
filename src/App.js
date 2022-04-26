@@ -37,9 +37,6 @@ const App = () => {
             <NavItem>
               <NavLink href="/store">In Store Purchases</NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
@@ -60,7 +57,9 @@ const App = () => {
           </Nav>
         </Collapse>
       </Navbar>
+
       <Header />
+      
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<List />} />
