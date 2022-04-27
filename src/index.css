@@ -63,7 +63,8 @@ h3 {
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
-  max-width: 450px;
+  max-width: 890px;
+  min-height: 180px;
   border-top: black 2px solid ;
   border-left:black 2px solid  ;
   border-bottom: black 4px solid;
@@ -76,12 +77,10 @@ h3 {
 }
 
 .order-info {
-  text-align: left;
-  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   position: relative;
-  bottom: 0px;
-}
-
-.order-info p {
-  margin-top: 5px;
+  bottom: 0%;
 }

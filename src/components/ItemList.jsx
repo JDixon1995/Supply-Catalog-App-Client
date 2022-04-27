@@ -1,8 +1,10 @@
 const ItemList = ({ data }) => {
   return (
-	<div className="item-list">
+	<div>
 		<h5>Item Order</h5>
+		<div className="item-list">
 		{data.items.map((item) => <h6>{item.name}</h6>)}
+		</div>
 	</div>
   )
 }
