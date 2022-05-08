@@ -11,3 +11,17 @@ body {
   height: 100vh;
   background-color: antiquewhite;
 }
+
+.landing {
+  text-align: center;
+}
+
+.landing article {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.card {
+  padding: 3px;
+  margin: 5px;
+}

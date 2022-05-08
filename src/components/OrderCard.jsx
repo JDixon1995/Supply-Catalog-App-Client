@@ -13,10 +13,11 @@ const OrderCard = ({ data }) => {
 	body
     color="secondary"
     outline
+	className='card'
 	>
     	<CardBody>
       		<CardTitle tag="h5">
-        	{data.customer.email}
+			Customer Email: {data.customer.email}
       		</CardTitle>
       	<CardSubtitle
         className="mb-2 text-muted"

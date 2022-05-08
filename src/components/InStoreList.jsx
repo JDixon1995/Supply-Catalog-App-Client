@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import SaleTicket from './SaleTicket';
+import OrderCard from './OrderCard'
 
 const InStoreList = () => {
 
@@ -20,7 +20,7 @@ const InStoreList = () => {
 	<div>
 		<div className='container'>
         {dataCollection.map((data, index) =>
-          <SaleTicket
+          <OrderCard
           key={index} 
           data={data} 
           />
