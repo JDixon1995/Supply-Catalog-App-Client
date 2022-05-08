@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './components/Header';
 import Landing from './components/Landing';
 import List from './components/List'
 import OnlineList from './components/OnlineList';
@@ -40,8 +39,6 @@ const App = () => {
           </Nav>
         </Collapse>
       </Navbar>
-
-      <Header />
       
       <BrowserRouter>
       <Routes>
