@@ -7,13 +7,14 @@ import {
 } from 'reactstrap'
 
 const OrderCard = ({ data }) => {
+
   return (
 	<div>
 	<Card
 	body
     color="secondary"
     outline
-	className='card'
+	className={data.purchaseMethod}
 	>
     	<CardBody>
       		<CardTitle tag="h5">
